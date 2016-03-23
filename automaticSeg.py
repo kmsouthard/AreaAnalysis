@@ -12,7 +12,7 @@ t_scale = 1.0 #frame per second
 xy_scale = 0.106 #um per pixel
 
 
-i = 0
+#i = 0
 for (path, dirs, files) in os.walk(path):
     for filename in fnmatch.filter(files, pattern):
         print filename
@@ -28,6 +28,6 @@ for (path, dirs, files) in os.walk(path):
         cluster_pos = cluster_positions(properties_clust)
         cluster_plot(movie, cluster_pos, properties_clust, filename, path, xy_scale)
         properties_clust.to_csv(path+filename+'.csv')
-        i += 1
-        if i > 10:
-            break
+#        i += 1
+#        if i > 10:
+#            break
